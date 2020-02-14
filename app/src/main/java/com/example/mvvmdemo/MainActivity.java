@@ -13,10 +13,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // TODO: Husk at gøre fields private som udgangspunkt
     TextView textView;
     EditText editText;
     Button button;
 
+    // TODO 3: Lav et field til at indeholde en instans af Model
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeText(View view) {
         String inputText = textView.getText().toString();
+        // TODO 4: inputText skal gemmes i instansen af Model som blev lavet i (3)
+        
+        // TODO 5: editText skal opdateres med data fra instansen af Model som blev lavet i (3) 
+        //         i stedet for at bruge inputText direkte
         editText.setText(inputText);
     }
 
