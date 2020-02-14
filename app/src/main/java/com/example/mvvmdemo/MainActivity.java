@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
             changeText(textView);
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void changeText(View view) {
-        String inputText = textView.getText().toString();
-        editText.setText(inputText);
-    }
 
+    public void changeText(View view) {
+        String inputText = editText.getText().toString();
+        textView.setText(inputText);
+    }
 
 }
