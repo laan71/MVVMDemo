@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.example.Model.Model;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editText;
     Button button;
 
+    Model model = new Model();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void changeText(View view) {
-        String inputText = editText.getText().toString();
-        textView.setText(inputText);
+
+        model.setText(editText.getText().toString());
+        textView.setText(model.getText());
     }
 
 }
